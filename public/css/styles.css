@@ -5,6 +5,7 @@ body, html {
     align-items: center;
     justify-content: center;
     font-family: Arial, sans-serif;
+    background-color: #FFE6B8;
 }
 
 .container {
@@ -14,7 +15,7 @@ body, html {
 }
 
 .image-side {
-    flex: 6;
+    flex: 8;
     position: relative;
 }
 
@@ -63,4 +64,51 @@ button {
 #signup {
     background-color: #28A745;
     color: white;
+<<<<<<< HEAD
 }
+=======
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: 30% 30%;
+    grid-template-rows: 45% 55%;
+    justify-content: center;
+    gap: 10px;
+    height: 75vh;
+    width: 100vw;
+}
+
+.image-grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image-grid-item img{
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container-side {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+#startnow {
+    background-color: #FFE6B8;
+    color: green;
+    border: 2px solid green;
+}
+>>>>>>> howtopage
