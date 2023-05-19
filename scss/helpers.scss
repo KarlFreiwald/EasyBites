@@ -1,0 +1,9 @@
+.button-container {
+  &.bc-center {
+  text-align: center;
+  }
+
+  button {
+    display: inline-block;
+  }
+}

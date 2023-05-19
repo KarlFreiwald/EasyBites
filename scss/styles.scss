@@ -1,0 +1,10 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "./helpers.scss";
+@import "./home.scss";
+@import "./about.scss";
+
+body, html {
+  font-family: Arial, sans-serif;
+  background-color: #FFE6B8;
+}
