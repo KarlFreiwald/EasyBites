@@ -1,6 +1,7 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 @import "./helpers.scss";
+@import "./menu.scss";
 @import "./home.scss";
 @import "./about.scss";
 
@@ -26,5 +27,4 @@
 
 body, html {
   font-family: PlayfairDisplay, serif;
-  background-color: #FFE6B8;
 }
