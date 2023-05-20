@@ -4,7 +4,27 @@
 @import "./home.scss";
 @import "./about.scss";
 
+/* FONTS */
+
+//noinspection ALL
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url('/fonts/playfair_display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//noinspection ALL
+@font-face {
+  font-family: 'Licorice';
+  src: url('/fonts/licorice/Licorice-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* GLOBAL STYLES */
+
 body, html {
-  font-family: Arial, sans-serif;
+  font-family: PlayfairDisplay, serif;
   background-color: #FFE6B8;
 }
