@@ -4,6 +4,7 @@
 @import "./menu.scss";
 @import "./home.scss";
 @import "./about.scss";
+@import "./recipe.scss";
 
 /* FONTS */
 
@@ -27,4 +28,13 @@
 
 body, html {
   font-family: PlayfairDisplay, serif;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+
+  &.script {
+    font-family: Licorice, PlayfairDisplay, serif;
+    font-weight: bold;
+  }
 }
