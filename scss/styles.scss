@@ -4,6 +4,7 @@
 @import "menu";
 @import "home";
 @import "about";
+@import "recipes";
 @import "recipe-view";
 
 /* FONTS */
@@ -30,7 +31,12 @@ body, html {
   font-family: PlayfairDisplay, serif;
 }
 
+.container {
+  max-width: 1120px;
+}
+
 h1, h2, h3 {
+  font-size: 28px;
   font-weight: bold;
 
   &.script {
