@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 
 // import environment variables
-//const dotenv = require('dotenv');
+const dotenv = require('dotenv').config();
 //dotenv.config();
 
 // define app server
@@ -34,7 +34,8 @@ app.use('/', routes);
 
 // listen on port 3000
 app.listen(3000, () => {
-    console.log(`EasyBites listening on 3000...`);
+    console.log(`EasyBites listening on ${port}...`);
+    //console.log(`EasyBites listening on ${process.env.PORT}`);
 });
 
 module.exports = app;
