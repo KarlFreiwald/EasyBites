@@ -16,7 +16,8 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
-const port = 3000;
+
+const port = process.env.PORT;
 
 // enable for forms reading
 app.use(bodyParser.urlencoded({extended: true}));

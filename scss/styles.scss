@@ -1,5 +1,11 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+/* VARIABLES */
+
+$dark_green: #007139;
+$dark_yellow: #f0ab00;
+$dark_red: #a32f2d;
+
 @import "helpers";
 @import "menu";
 @import "home";
@@ -43,4 +49,9 @@ h1, h2, h3 {
     font-family: Licorice, PlayfairDisplay, serif;
     font-weight: bold;
   }
+}
+
+a {
+  display: inline-block;
+  color: $dark-yellow;
 }
