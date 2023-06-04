@@ -1,15 +1,23 @@
-{{> welcome-menu }}
-
 <div class="container auth-container justify-content-center">
-    <form class="mt-5" action="/register" method="POST">
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
-        </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
-        </div>
-        <button type="submit" class="btn btn-primary">Sign up</button>
-    </form>
+    <div class="big-logo" href="/"><span>Easy</span><span>Bites</span><img src="images/logo.png" alt="Logo"></div>
+    <div class="box-signup">
+        <h2>REGISTER NOW</h2>
+            <form class="mt-5" action="/register" method="POST">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+                </div>
+                <div class="col-sm-12 text-center">
+                    <button type="submit" class="btn gradient-button">Sign up</button>
+                </div>
+            </form>
+            <div class="col-sm-12 text-center">
+                <a href="/login">Sign in</a>
+            </div>
+        </h2>
+    </div>
 </div>
