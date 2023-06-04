@@ -3,6 +3,7 @@
 /* VARIABLES */
 
 $dark_green: #007139;
+$light_green: #40ac76;
 $dark_yellow: #f0ab00;
 $dark_red: #a32f2d;
 
@@ -12,6 +13,7 @@ $dark_red: #a32f2d;
 @import "about";
 @import "recipes";
 @import "recipe-view";
+@import "signup";
 
 /* FONTS */
 
@@ -54,4 +56,12 @@ h1, h2, h3 {
 a {
   display: inline-block;
   color: $dark-yellow;
+}
+
+.gradient-button {
+  color: white;
+  background: linear-gradient(to right, $dark_green, $light_green);
+  border-radius: 20px;
+  border: 1px solid $dark_green;
+  width: 50%;
 }
