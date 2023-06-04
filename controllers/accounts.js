@@ -1,5 +1,6 @@
-const userStore = require('../models/user-store.js');
-const logger = require('../utils/logger.js');
+const userStore = require('../models/user-store');
+const logger = require('../utils/logger');
+const helpers = require('../utils/helpers');
 
 const accounts = {
     logout(request, response) {
@@ -11,7 +12,8 @@ const accounts = {
         if (request.session.user) {
             response.redirect('/');
         } else {
-            response.render('login', {title: 'Login'});
+            const viewData = helpers.get_gets(request, {title: 'Login'});
+            response.render('login', viewData);
         }
     },
 
@@ -19,20 +21,26 @@ const accounts = {
         if (request.session.user) {
             response.redirect('/');
         } else {
-            response.render('signup', {title: 'Signup'});
+            response.render('signup', helpers.get_gets(request, {title: 'Signup'}));
         }
     },
 
     async register(request, response) {
         const result = await userStore.addUser(request.body);
-        response.redirect(result ? '/' : '/signup');
+        if (result)
+            response.redirect(result ? '/' : '/signup');
+        else
+            response.redirect('/signup?info_msg=Email already taken&info_classes=bg-danger text-white');
     },
 
     async authenticate(request, response) {
         const email = await userStore.authenticateUser(request.body.email, request.body.password);
-        if (email)
+        if (email) {
             request.session.user = email;
-        response.redirect(email ? '/' : '/');
+            response.redirect('/recipes');
+        }
+        else
+            response.redirect('/login?info_msg=Authentication error&info_classes=bg-danger text-white');
     },
 };
 
