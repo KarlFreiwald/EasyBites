@@ -4,6 +4,7 @@ const recipes = {
     index(request, response) {
         const viewData = {
             title: 'Recipes',
+            user: request.session.user
         };
 
         response.render('recipes.hbs', viewData);

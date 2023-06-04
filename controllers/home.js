@@ -5,8 +5,10 @@ const home = {
         const viewData = {
             title: 'EasyBites'
         };
-
-        response.render('index.hbs', viewData);
+        if (request.session.user)
+            response.redirect('/recipes');
+        else
+            response.render('index', viewData);
     },
 };
 
