@@ -18,25 +18,25 @@
       font-size: 24px;
       font-weight: 400;
     }
+  }
+}
 
-    .info {
-      .prep-container {
-        display: inline-block;
-        margin-right: 5px;
-        padding-right: 10px;
-        position: relative;
-        &:after {
-          background-color: black;
-          content: '';
-          height: 100%;
-          right: 0;
-          position: absolute;
-          width: 1px;
-        }
-      }
-      img {
-        height: 30px;
-      }
+.recipe-listing .recipe-item .info, .recipe-container {
+  .prep-container {
+    display: inline-block;
+    margin-right: 5px;
+    padding-right: 10px;
+    position: relative;
+    &:after {
+      background-color: black;
+      content: '';
+      height: 100%;
+      right: 0;
+      position: absolute;
+      width: 1px;
     }
+  }
+  img.icon {
+    height: 30px;
   }
 }
