@@ -1,3 +1,42 @@
-.recipe-item {
-  padding: 0 12px;
+.recipe-listing {
+  margin: 0 -18px;
+  .recipe-item {
+    padding: 0 32px;
+    margin-bottom: 24px;
+
+    .actions  {
+      margin-top: 6px;
+      button {
+        padding: 4px;
+        img {
+          width: 36px;
+        }
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .info {
+      .prep-container {
+        display: inline-block;
+        margin-right: 5px;
+        padding-right: 10px;
+        position: relative;
+        &:after {
+          background-color: black;
+          content: '';
+          height: 100%;
+          right: 0;
+          position: absolute;
+          width: 1px;
+        }
+      }
+      img {
+        height: 30px;
+      }
+    }
+  }
 }

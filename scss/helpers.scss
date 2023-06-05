@@ -36,3 +36,9 @@ div.container.auth-container {
   position: fixed;
   right: 20px;
 }
+
+div.vertical-line {
+  border-left: 1px solid #000;
+  display: inline-block;
+  height: 100%;
+}
