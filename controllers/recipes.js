@@ -12,11 +12,14 @@ const recipes = {
 
         response.render('recipes.hbs', viewData);
     },
-    view(request, response) {
+    async view(request, response) {
         const viewData = {
             title: 'Recipe', // TODO: change to recipes name
-            recipe_id: request.params.recipe_id
+            recipe: await recipeStore.getSingleRecipe(request.params.recipe_id),
+            ingredients: await recipeStore.getIngredientsForRecipe(request.params.recipe_id)
         };
+
+        logger.info(viewData);
 
         response.render('recipe-view.hbs', viewData);
     }

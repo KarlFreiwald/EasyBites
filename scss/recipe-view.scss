@@ -1,5 +1,16 @@
 .recipe-container {
+  font-size: 18px;
   .col-sm-6:first-child img {
     width: 100%;
+  }
+  .single-ingredient-container {
+    display: flex;
+    justify-content: space-between;
+    span.name {
+      align-self: flex-start;
+    }
+    span.amount {
+      align-self: flex-end;
+    }
   }
 }
