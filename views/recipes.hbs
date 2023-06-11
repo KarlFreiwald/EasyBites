@@ -19,31 +19,38 @@
     </div>
     <div class="recipe-listing">
         <div class="row">
-            <div class="col-sm-6 mt-4 recipe-item">
-                <div class="ingredients-info"></div>
-                <div class="image-container">
-                    <img src="/images/pasta.jpg" alt="Pasta with tomato sauce and cheese" class="img-fluid">
-                </div>
-                <div class="actions">
-                    <button class="btn btn-default" type="button">
-                        <img src="/icons/heart.svg" alt="Like">
-                    </button>
-                    <button class="btn btn-default" type="button">
-                        <img src="/icons/chat.svg" alt="Comment">
-                    </button>
-                    <button class="btn btn-default" type="button">
-                        <img src="/icons/share.png" alt="Share">
-                    </button>
-                </div>
-                <h3 class="mt-2">Pasta with tomato sauce and cheese</h3>
-                <div class="info mt-3">
-                    <div class="prep-container">
-                        <img class="icon" src="/icons/time.svg" alt="Preparation time">
-                        <span>20</span> Min
+            {{#each recipes}}
+                <div class="col-sm-6 mt-4 recipe-item">
+                    <div class="image-container">
+                        <a href="/recipes/1">
+                            <img src="{{img_url}}" alt="{{title}}" class="img-fluid">
+                        </a>
                     </div>
-                    <img class="icon" src="/icons/plant.png" alt="vegetarian">
+                    <div class="actions">
+                        <button class="btn btn-default" type="button">
+                            <img src="/icons/heart.svg" alt="Like">
+                        </button>
+                        <button class="btn btn-default" type="button">
+                            <img src="/icons/chat.svg" alt="Comment">
+                        </button>
+                        <button class="btn btn-default" type="button">
+                            <img src="/icons/share.png" alt="Share">
+                        </button>
+                    </div>
+                    <a href="/recipes/1" class="no-style">
+                        <h3 class="mt-2">{{title}}</h3>
+                    </a>
+                    <div class="info mt-3">
+                        <div class="prep-container">
+                            <img class="icon" src="/icons/time.svg" alt="Preparation time">
+                            <span>{{prep_time}}</span> Min
+                        </div>
+                        {{#if vegetarian}}
+                            <img class="icon" src="/icons/plant.png" alt="vegetarian">
+                        {{/if}}
+                    </div>
                 </div>
-            </div>
+            {{/each}}
         </div>
     </div>
 </div>

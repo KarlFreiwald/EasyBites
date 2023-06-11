@@ -1,9 +1,12 @@
 const logger = require('../utils/logger');
-
+const recipeStore = require('../models/recipes-store')
 const recipes = {
-    index(request, response) {
+    async index(request, response) {
+        const data = recipeStore.getRecipeData();
+        logger.info(data);
         const viewData = {
             title: 'Recipes',
+            recipes: await recipeStore.getRecipeData(),
             user: request.session.user
         };
 
