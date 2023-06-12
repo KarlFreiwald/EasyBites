@@ -9,6 +9,7 @@ const accounts = require('./controllers/accounts.js');
 
 router.get('/', home.index);
 router.get('/login', accounts.login);
+router.get('/logout', accounts.logout);
 router.get('/signup', accounts.signup);
 router.get('/about', about.index);
 router.get('/contact', contact.index);
