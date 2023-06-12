@@ -1,0 +1,19 @@
+{{#if user}}
+    {{> user-menu }}
+{{else}}
+    {{> welcome-menu }}
+{{/if}}
+<div class="container">
+    <h1 class="large mt-3">{{title}}</h1>
+    <p class="mt-4 mb-4">
+        If you have any questions, suggestions or feedback, We would love to hear from you.<br>
+        You can also fill out the contact form below:
+    </p>
+
+    <form action="#" class="contact-form">
+        <input type="email" placeholder="EMAIL*">
+        <textarea name="" id="" cols="30" rows="10" placeholder="MESSAGE*"></textarea>
+        <button type="submit" class="btn btn-primary gradient-button">SEND</button>
+        <div class="clear-both"></div>
+    </form>
+</div>

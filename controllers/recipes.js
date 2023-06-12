@@ -15,6 +15,7 @@ const recipes = {
     async view(request, response) {
         const viewData = {
             title: 'Recipe', // TODO: change to recipes name
+            user: request.session.user,
             recipe: await recipeStore.getSingleRecipe(request.params.recipe_id),
             ingredients: await recipeStore.getIngredientsForRecipe(request.params.recipe_id)
         };
