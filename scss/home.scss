@@ -69,3 +69,25 @@
     text-align: center;
   }
 }
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 45% 55%;
+  justify-content: center;
+  gap: 10px;
+  height: 75vh;
+}
+
+.image-grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  img {
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+  }
+}

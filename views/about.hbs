@@ -1,29 +1,49 @@
-{{> welcome-menu }}
+{{#if user}}
+    {{> user-menu }}
+{{else}}
+    {{> welcome-menu }}
+{{/if}}
 <div class="container">
-    <h1 class="mt-3 fs-1">
-        <u>How <span style="color: #35B348;">Easy</span><span style="color: #F0AB00;">Bites</span> works - In <span style="color: #74096C;">4</span> easy steps to your perfect dish!</u>
-    </h1>
-    <div class="image-grid">
-        <div class="image-grid-item">
-            <img src="/images/im_howto_1.png" alt="Image 1">
-            <p>Fill in your preferences. Tell us how you like to eat and what your budget is. <strong>We'll suggest recipes to suit you.</strong></p>
+    <div class="row mt-3">
+        <div class="col-sm-8">
+            <h1 class="mt-3 fs-1 special-font">
+                #About <span style="color: #007139;">Easy</span><span style="color: #f0ab00;">Bites</span>
+            </h1>
+            <p>
+                We are EasyBites, a website that specialises in creating low-cost recipes for students that can be 
+                made with the ingredients you already have in your fridge. Our goal is to help you save money, save time 
+                and enjoy delicious meals at the same time.
+            </p>
         </div>
-        <div class="image-grid-item">
-            <img src="/images/im_howto_2.png" alt="Image 2">
-            <p>Fill in what you have. Tell us what ingredients you have in your fridge or pantry. <strong>We'll find the best recipes for you.</strong></p>
-        </div>
-        <div class="image-grid-item">
-            <img src="/images/im_howto_3.png" alt="Image 3">
-            <p>Choose your recipes. Filter by your taste and check out the recipes with pictures and ratings. <strong>Save, share or rate them as you like.</strong></p>
-        </div>
-        <div class="image-grid-item">
-            <img src="/images/im_howto_4.png" alt="Image 4">
-            <p>Create your recipes. Be creative and share your own dishes with the community. <strong>Get feedback and inspiration from other users.</strong></p>
+        <div class="col-sm-3">
+            <img src="/images/im_about_1.png" alt="Image About 1" class="img-fluid">
         </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-sm-6 text-center">
-            <a href="/signup" class="btn gradient-button">START NOW</a>
+    <div class="row mt-3">
+        <div class="col-sm-3">
+            <img src="/images/im_about_2.png" alt="Image About 2" class="img-fluid">
+        </div>
+        <div class="col-sm-8">
+            <h1 class="mt-3 fs-1 special-font">#Our values and personality</h1>
+            <p>
+                At EasyBites, we value sustainability and avoiding food waste. We believe in flexibility in cooking 
+                and want to show you how to find creative solutions to cook with the ingredients available and not neglect 
+                the taste.
+            </p>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-sm-9">
+            <h1 class="mt-3 fs-1 special-font">#Our goals</h1>
+            <ul>
+                <li>Cook on the cheap: Discover recipes that won't break your student budget but are still delicious.</li>
+                <li>Save time: Our simple and easy recipes allow you to prepare delicious meals quickly and efficiently.</li>
+                <li>Learn new recipes that are easy: Expand your cooking repertoire and try new and easy recipes that are suitable for beginners.</li>
+                <li>No food waste: Use the ingredients you already have to create delicious dishes while reducing food waste.</li>
+            </ul>
+        </div>
+        <div class="col-sm-2">
+            <img src="/images/im_about_3.png" alt="Image About 3" class="img-fluid">
         </div>
     </div>
 </div>

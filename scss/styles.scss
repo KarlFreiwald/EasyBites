@@ -35,6 +35,13 @@ $light_skin: #fff8eb;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Shrikhand';
+  src: url('/fonts/shrikhand/Shrikhand-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* GLOBAL STYLES */
 
 body, html {
