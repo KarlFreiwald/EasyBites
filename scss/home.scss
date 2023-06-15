@@ -1,93 +1,45 @@
 /* HOME PAGE STYLES */
-
 .lp-container {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  .image-side {
-    flex: 8;
-    position: relative;
-  }
+  height: calc(100vh - 70px);
+  padding: 20px 32px;
 
-  .image-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+  .text-col {
+    h1 {
+      font-weight: bold;
     }
   }
 
-  .text-side {
-    flex: 4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
-  }
-
-  .title {
-    font-size: 2em;
-    font-weight: bold;
-    color: #333;
-  }
-
-  button {
-    padding: 10px 20px;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  #login {
-    background-color: #007BFF;
-    color: white;
-  }
-
-  #signup {
-    background-color: #28A745;
-    color: white;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  .container-side {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
+  .image-col img {
+    width: 100%;
   }
 }
 
-.image-grid {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 45% 55%;
-  justify-content: center;
-  gap: 10px;
-  height: 75vh;
+.landing-container {
+  height: 100vh;
 }
 
-.image-grid-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  img {
-    width: 75%;
-    height: 75%;
-    object-fit: cover;
+#scroll-down-button {
+  animation: upDownAnimation 1s infinite alternate;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  i {
+    font-size: 50px;
+    color: $dark_green;
   }
+}
+
+@keyframes upDownAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.get-started-container {
+  padding-top: 32px;
 }

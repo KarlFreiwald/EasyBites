@@ -1,26 +1,36 @@
 {{> welcome-menu }}
 
 <div class="lp-container">
-    <div class="half-container">
-        <div class="text-side">
-            <h1 class="title">Delicious meals on a student budget - with no waste, just taste!</h1>
-            <p>
+    <div class="row">
+        <div class="col-sm-6 text-col">
+            <h1 class="title large mt-3">Delicious meals on a student budget - with no waste, just taste!</h1>
+            <p class="mt-4">
                 Here you can find and make great recipes from the ingredients you already have in your fridge.
                 <br><br>
                 Save money, time and food and enjoy every bite!
             </p>
+        </div>
+        <div class="col-sm-6 image-col">
+           <img src="/images/dont_waste_food.png" alt="Don't waste food">
+        </div>
+    </div>
+    <button class="btn btn-no-style" type="button" onclick="scrollDown()" id="scroll-down-button">
+        <i class="fas fa-arrow-down"></i>
+    </button>
+    <script>
+        function scrollDown() {
+            // Calculate the height of the viewport
+            const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 
-        </div>
-    </div>
-    <div class="half-container">
-        <div class="image-side">
-            <div class="image-container">
-                <img src="public/images/dontWasteFood_peach.jpg" alt="Don't waste food" >
-            </div>
-        </div>
-    </div>
+            // Scroll the page down by the height of the viewport
+            window.scrollTo({
+                top: viewportHeight,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </div>
-<div class="container">
+<div class="get-started-container container">
     <h1 class="mb-4 fs-2 text-center">
         <u>How <span style="color: #007139;">Easy</span><span style="color: #f0ab00;">Bites</span> works - In <span style="color: #74096C;">4</span> easy steps to your perfect dish!</u>
     </h1>
